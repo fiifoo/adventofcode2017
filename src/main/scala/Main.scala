@@ -1,6 +1,6 @@
 object Main {
   def main(args: Array[String]): Unit = {
-    val result = Day10.two
+    val result = Day11.two
 
     println(result)
   }
