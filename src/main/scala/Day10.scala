@@ -12,7 +12,11 @@ object Day10 {
   }
 
   def two: String = {
-    val lengths = input.map(_.toInt).toList ::: List(17, 31, 73, 47, 23)
+    hash(input)
+  }
+
+  def hash(source: String): String = {
+    val lengths = source.map(_.toInt).toList ::: List(17, 31, 73, 47, 23)
     val state = ((0 until 64) foldLeft State()) ((state, _) => {
       (lengths foldLeft state) (step)
     })
